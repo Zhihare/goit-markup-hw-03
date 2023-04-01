@@ -1,21 +1,34 @@
-body {
-    font-family: Roboto, sans-serif;
-    color: #434455;
-    font-size: 16px;
-    background-color: #FFFFFF;
-}
 
 :root {
     --color: #2e2f42;
-    --background-color: #F4F4FD;
+    --background-color-bat-port: #F4F4FD;
     --color-batton:  #4d5ae5;
     --color-adress: #434455;
+    --background-color: #FFFFFF;
+    --body-text-cl: #434455;
+    --batton-text-cl: #FFFFFF;
+    --batton-active: #404BBF; 
+    --backgr-main-sect: #2E2F42;
+    --backgr-team: #f4f4fd;
+    --backgr-footer: #2E2F42;
+    --span-cl: #2e2f42;
+    --span-footer-cl: #f4f4fd;
+    --header-cl: #FFFFFF;
 }
+
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--body-text-cl);
+    font-size: 16px;
+    background-color: var(--background-color);
+}
+
 
 /*styles of links and buttons on focus and hover*/
 .button {
-    color: #FFFFFF;
-    background-color: #4D5AE5;
+    color: var(--background-color);
+    background-color: var(--color-batton);
     cursor: pointer;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -26,7 +39,7 @@ body {
 
 .portfolio-button {
     color: var(--color-batton);
-    background-color: var(--background-color);
+    background-color: var(--background-color-bat-port);
     cursor: pointer;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -37,41 +50,41 @@ body {
 
 .button:hover,
 .button:focus{
-    background-color: #404BBF;
+    background-color: var(--batton-active);
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
-    background-color: #404BBF;
-    color: #FFFFFF;
+    background-color: var(--batton-active);
+    color: var(--batton-text-cl);
 }
 
 .header-line:hover,
 .header-line:focus {
-    color: #404bbf;
+    color: var(--batton-active);
 }
 .adress-link:hover,
 .adress-link:focus{
-    color: #404bbf;
+    color: var(--batton-active);
 }
 
 /*backgraund-color on sections*/
 .main-section-bus {
-    background-color: #2E2F42;
+    background-color: var(--backgr-main-sect);
 }
 
 .main-section-team {
-    background-color: #F4F4FD;
+    background-color: var(--backgr-team);
 }
 
 .footer {
-    background-color: #2E2F42;
+    background-color: var(--backgr-footer);
 }
 
 
 /*text size, color*/
 .head-link {
-    color: #4d5ae5;
+    color: var(--color-batton);
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -82,7 +95,7 @@ body {
 }
 
 .head-link span {
-    color: #2e2f42;
+    color: var(--span-cl);
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -93,7 +106,7 @@ body {
 }
 
 .footer-link {
-    color: #4d5ae5;
+    color: var(--color-batton);
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -104,7 +117,7 @@ body {
 }
 
 .footer-link span {
-    color: #f4f4fd;
+    color: var(--span-footer-cl);
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -120,7 +133,7 @@ body {
 }
 
 .span-logo {
-    color: #2e2f42;
+    color: var(--span-cl);
     text-decoration: none;
 }
 
@@ -150,7 +163,7 @@ body {
 
 .main-header {
     font-size: 56px;
-    color: #FFFF;
+    color: var(--header-cl);
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
@@ -159,7 +172,7 @@ body {
 
 .fotter-paragraph {
     font-size: 16px;
-    color: #F4F4FD;
+    color: var(--backgr-team);
 }
 
 .list-header {
@@ -167,14 +180,14 @@ body {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: #2e2f42;
+    color: var(--color);
 }
 
 .list-paragraph {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
+    color: var(--color-adress);
 }
 
 .main-header-doing {
@@ -183,7 +196,7 @@ body {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: #2e2f42;
+    color: var(--color);
 }
 
 .main-header-team {
@@ -192,10 +205,9 @@ body {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: #2e2f42;
+    color: var(--color);
 
 }
-
-.team-list {
-    background-color: #FFFFFF;
+.team-list{
+    background-color: var(--background-color);
 }
