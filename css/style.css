@@ -1,13 +1,12 @@
-
 :root {
     --color: #2e2f42;
     --background-color-bat-port: #F4F4FD;
-    --color-batton:  #4d5ae5;
+    --color-batton: #4d5ae5;
     --color-adress: #434455;
     --background-color: #FFFFFF;
     --body-text-cl: #434455;
     --batton-text-cl: #FFFFFF;
-    --batton-active: #404BBF; 
+    --batton-active: #404BBF;
     --backgr-main-sect: #2E2F42;
     --backgr-team: #f4f4fd;
     --backgr-footer: #2E2F42;
@@ -16,14 +15,59 @@
     --header-cl: #FFFFFF;
 }
 
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: Roboto, sans-serif;
     color: var(--body-text-cl);
     font-size: 16px;
     background-color: var(--background-color);
+
 }
 
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.head-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav {
+    display: flex;
+}
+
+
+.head-list {
+    display: flex;
+ 
+}
+
+.adress-list {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.head-list .nav-link+.nav-link {
+    margin-left: 40px;
+}
+
+.adress-list .nav-link+.nav-link {
+    margin-left: 40px;
+}
 
 /*styles of links and buttons on focus and hover*/
 .button {
@@ -49,7 +93,7 @@ body {
 }
 
 .button:hover,
-.button:focus{
+.button:focus {
     background-color: var(--batton-active);
 }
 
@@ -63,8 +107,9 @@ body {
 .header-line:focus {
     color: var(--batton-active);
 }
+
 .adress-link:hover,
-.adress-link:focus{
+.adress-link:focus {
     color: var(--batton-active);
 }
 
@@ -84,6 +129,10 @@ body {
 
 /*text size, color*/
 .head-link {
+    display: flex;
+    align-items: center;
+    margin-right: 76px;
+
     color: var(--color-batton);
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -138,6 +187,10 @@ body {
 }
 
 .header-line {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -208,6 +261,7 @@ body {
     color: var(--color);
 
 }
-.team-list{
+
+.team-list {
     background-color: var(--background-color);
 }
