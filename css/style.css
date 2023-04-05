@@ -27,6 +27,10 @@ ul {
     padding: 0;
 }
 
+img {
+    display: block;
+}
+
 body {
     font-family: Roboto, sans-serif;
     color: var(--body-text-cl);
@@ -55,47 +59,74 @@ body {
     margin: 0 auto;
 }
 
-.head-nav {
-    display: flex;
-    align-items: center;
-
+.header {
     border-bottom: 1px solid #E7E9FC;
+}
 
+.head-flex {
+    display: flex;
+    align-items: center
 }
 
 .nav {
     display: flex;
-    margin: 0;
+    align-items: center;
 }
 
+.head-link {
+    display: flex;
+    align-items: center;
+    margin-right: 76px;
+
+    color: var(--color-batton);
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
 
 .head-list {
     display: flex;
-
+    gap: 40px;
 }
 
 .adress-list {
     display: flex;
+    gap: 40px;
     margin-left: 332px;
 
 }
 
-.head-list .nav-link+.nav-link {
+.header-adress {
+    align-items: center;
+}
+
+.nav-link {
+    padding: 24px 0;
+}
+
+
+/*.head-list .nav-link+.nav-link {
     margin-left: 40px;
 }
 
 .adress-list .nav-link+.nav-link {
     margin-left: 40px;
 }
+*/
 
 /*styles of links and buttons on focus and hover*/
 .button {
-    display: flex;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
     flex-direction: row;
     margin-right: auto;
     margin-left: auto;
-    padding: 16px 32px;
-    gap: 10px;
     margin-top: 48px;
 
 
@@ -116,12 +147,12 @@ body {
 .button-list {
     display: flex;
     justify-content: center;
-
+    gap: 24px;
+    margin-bottom: 72px;
 }
 
 .portfolio {
-    margin-top: 96px;
-    margin-bottom: 120px;
+    padding: 96px 120px;
 }
 
 .portfolio-button {
@@ -146,31 +177,20 @@ body {
 
 }
 
-.button-list .button-link+.button-link {
-    margin-left: 24px;
-}
-
 .ul-port-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 24px;
-
+    column-gap: 24px;
+    row-gap: 48px;
 
 }
 
 .portfolio-lists {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc(100%/3);
-    margin-top: 48px;
-    margin-left: 0px;
+    flex-basis: calc((100% - 48px) / 3);
 
 }
-
-.port-link {
-    border: 1px solid #E7E9FC;
-}
-
 
 .button:hover,
 .button:focus {
@@ -181,6 +201,7 @@ body {
 .portfolio-button:focus {
     background-color: var(--batton-active);
     color: var(--batton-text-cl);
+    border: 1px solid;
 }
 
 .header-line:hover,
@@ -196,12 +217,11 @@ body {
 /*backgraund-color on sections*/
 .main-section-bus {
     background-color: var(--backgr-main-sect);
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 120px 0;
 }
 
 .main-header {
-    width: 530px;
+    max-width: 496px;
     font-size: 56px;
     color: var(--header-cl);
     line-height: 1.07;
@@ -211,36 +231,26 @@ body {
 
 .main-section {
     margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.main-section-img {
+    padding-bottom: 120px;
 }
 
 .main-section-team {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px;
     background-color: var(--backgr-team);
 }
 
 .footer {
     background-color: var(--backgr-footer);
+    padding: 100px 0;
 }
 
 
 /*text size, color*/
-.head-link {
-    display: flex;
-    align-items: center;
-    margin-right: 76px;
 
-    color: var(--color-batton);
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    text-decoration: none;
-}
 
 .head-link span {
     color: var(--span-cl);
@@ -254,9 +264,8 @@ body {
 }
 
 .footer-link {
-    display: block;
-    padding-top: 100px;
-
+    display: inline-block;
+    margin-bottom: 16px;
 
     color: var(--color-batton);
     font-family: "Raleway", sans-serif;
@@ -280,9 +289,8 @@ body {
 }
 
 .fotter-paragraph {
-    display: flex;
-    margin-top: 16px;
-    padding-bottom: 100px;
+    max-width: 264px;
+
 
 }
 
@@ -298,8 +306,6 @@ body {
 
 .header-line {
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
 
     font-weight: 500;
     font-size: 16px;
@@ -328,8 +334,11 @@ body {
 
 .main-list {
     display: flex;
-    flex-basis: calc(100%/4);
     gap: 24px;
+}
+
+.main-line {
+    flex-basis: calc((100% - 72px) / 4);
 }
 
 
@@ -338,12 +347,12 @@ body {
 .fotter-paragraph {
     font-size: 16px;
     color: var(--backgr-team);
+    margin: 0;
 }
 
 .list-header {
     display: block;
-    margin-top: 32px;
-
+    margin-bottom: 8px;
 
     font-weight: 500;
     font-size: 20px;
@@ -355,7 +364,6 @@ body {
 .list-paragraph {
     width: 264px;
     display: block;
-    margin-top: 8px;
 
 
     font-size: 16px;
@@ -366,9 +374,6 @@ body {
 
 .list-paragraph-team {
     display: block;
-    margin-top: 8px;
-    margin-bottom: 32px;
-
 
     font-size: 16px;
     line-height: 1.5;
@@ -377,11 +382,15 @@ body {
     text-align: center;
 }
 
+.pogr-prod-cards {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    margin-bottom: 8px;
+}
+
 .list-header-port {
     display: block;
-    margin-top: 32px;
-    padding-left: 15px;
-    padding-right: 15px;
 
     font-weight: 500;
     font-size: 20px;
@@ -392,10 +401,6 @@ body {
 
 .list-paragraph-port {
     display: block;
-    margin-top: 8px;
-    margin-bottom: 32px;
-    padding-left: 15px;
-    padding-right: 15px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -404,7 +409,7 @@ body {
 }
 
 .main-header-doing {
-    margin-top: 120px;
+    margin-bottom: 72px;
 
     font-size: 36px;
     line-height: 1.11;
@@ -416,19 +421,17 @@ body {
 
 .header-doing-list {
     display: flex;
-    margin-top: 72px;
-    margin-left: -24px;
+    gap: 24px;
 }
 
 .header-doing-link {
     display: flex;
-    flex-basis: (100%/3);
-    margin-left: 24px;
-
+    flex-basis: calc((100% - 48px) / 3);
 }
 
 .main-header-team {
-    padding-top: 120px;
+    margin-bottom: 72px;
+
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
@@ -440,22 +443,24 @@ body {
 
 .ul-team-list {
     display: flex;
-    flex-basis: calc(100%/4);
-    margin-left: -24px;
-    align-items: center;
+    gap: 24px;
+}
+
+.team-cards {
+    padding: 32px 16px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-list {
+    flex-basis: calc((100% - 72px) / 4);
     background-color: var(--background-color);
-    margin-left: 24px;
-    margin-top: 72px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
+
 }
 
 .list-header-team {
     display: block;
-    margin-top: 32px;
+    margin-bottom: 8px;
 
     font-weight: 500;
     font-size: 20px;
