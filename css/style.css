@@ -156,8 +156,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 12px 24px;
-    width: 126px;
-    height: 48px;
+
 
     color: var(--color-batton);
     background-color: var(--background-color-bat-port);
@@ -283,8 +282,12 @@ body {
 
 .fotter-paragraph {
     max-width: 264px;
+    max-height: 116px;
+    padding: 0;
+}
 
-
+.link.footer-link.container {
+    padding: 0;
 }
 
 .list {
@@ -379,7 +382,6 @@ body {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    margin-bottom: 8px;
 }
 
 .list-header-port {
