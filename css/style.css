@@ -104,16 +104,6 @@ body {
 }
 
 
-/*.head-list .nav-link+.nav-link {
-    margin-left: 40px;
-}
-
-.adress-list .nav-link+.nav-link {
-    margin-left: 40px;
-}
-*/
-
-/*styles of links and buttons on focus and hover*/
 .button {
     display: block;
     min-width: 169px;
@@ -180,8 +170,6 @@ body {
 }
 
 .portfolio-lists {
-    display: flex;
-    flex-wrap: wrap;
     width: calc((100% - 48px) / 3);
 }
 
@@ -282,7 +270,7 @@ body {
 
 .fotter-paragraph {
     max-width: 264px;
-    max-height: 116px;
+    height: 72px;
     padding: 0;
 }
 
